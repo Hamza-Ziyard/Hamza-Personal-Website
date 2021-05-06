@@ -285,6 +285,30 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #0563bb;
 }
 
+
+.btn-cv{
+  padding:10px 40px;
+  font-family: "Rajdhani", sans-serif;
+  background-color: #3f8bd386;
+  color: #fff;
+  border-radius:20px;
+  border: none;
+  transition:.5s;
+  box-shadow:2px 2px 15px #3f8bd386;
+  font-size: 20px;
+}
+
+.btn-cv:hover{
+  transform:scale(0.9);
+  /* box-shadow:2px 2px 20px #3f8bd386; */
+  box-shadow:1px 1px 10px #3f8bd386;
+}
+
+.btn-cv a{
+  text-decoration:none;
+  color: white;
+}
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
