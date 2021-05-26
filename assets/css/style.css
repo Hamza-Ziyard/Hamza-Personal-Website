@@ -13,12 +13,68 @@
 
 
 
+:root{
+  --mobile-nav-bg:rgb(48, 48, 48);
+  --icon-color:rgb(245, 245, 245);
+  --icon-badge: #000;
+  --primary-color:#2e2e2e;
+  --secondary-color:#fff;
+  --heading: #fff;
+  --resume-bg:rgba(0, 0, 0, 0.103);
+  --skill-box:rgba(255,255,255,0.2);
+  --nav-link:#272829;
+  --nav-font:white;
+  --footer-bg:#2b2b2b;
+  --about-title:#728394;
+  --skill-bar-font:#979797;
+  --skill-bar-bg:#979797;
+  --resume-sub-top:#a5a4a4;
+  --download-bg:#0563bb;
+  --download-hover:#0678e3;
+  --year-bg:rgba(255, 255, 255,0.2);
+  --title-line:#ddd;
+  --contact-font:#9faab6;
+  --p-hover:rgba(0,0,0,0.9);
+  --p-hover-line:#d7dce1;
+  --p-hover-link:#272829;
+  --p-hover-topic:white;
+}
+
+.light-theme{
+  --mobile-nav-bg:rgb(255, 255, 255);
+  --icon-color:#2e2e2e;
+  --icon-badge:#fff;
+  --primary-color:rgb(238, 238, 238);
+  --secondary-color:black;
+  --heading: #000;
+  --resume-bg:rgba(224, 223, 223, 0.459);
+  --skill-box:rgba(0, 0, 0, 0.075);
+  --nav-link:#e8eaeb;
+  --nav-font:#000;
+  --footer-bg:rgb(223, 223, 223);
+  --about-title:#0563bb;
+  --skill-bar-font:rgb(0, 0, 0);
+  --skill-bar-bg:rgb(212, 212, 212);
+  --resume-sub-top:rgb(97, 97, 97);
+  --download-bg:#0563bb;
+  --download-hover:#0678e3;
+  --year-bg:rgb(226, 225, 225);
+  --title-line:rgb(26, 25, 25);
+  --contact-font:rgb(99, 99, 99);
+  --p-hover:rgba(255, 255, 255,0.9);
+  --p-hover-line:#0563bb;
+  --p-hover-link:#000000;
+  --p-hover-topic:#0563bb;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   /* color: #272829; */
-  color: white;
-  background-color:#2e2e2e;
+  color: var(--secondary-color);
+  background-color:var(--primary-color);
 }
+
+
 
 a {
   color: #0563bb;
@@ -160,7 +216,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 992px) {
   #header {
     width: 300px;
-    background: rgb(48, 48, 48);
+    background: var(--mobile-nav-bg);
     color: white;
     left: -300px;
   }
@@ -197,18 +253,40 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a {
   display: flex;
   align-items: center;
-  color: #fff;
+  color: var(--nav-font);
   padding: 10px 18px;
   margin-bottom: 8px;
   transition: 0.3s;
   font-size: 15px;
   border-radius: 50px;
-  /* background: #f2f3f5; */
   height: 56px;
   width: 100%;
   overflow: hidden;
   transition: 0.3s;
-  background-color: #272829;
+  background-color: var(--nav-link);
+}
+
+.nav-menu a i,.nav-menu a i span{
+  color: var(--nav-font)
+}
+
+#icon{
+  background-color: var(--icon-color);
+}
+
+#icon i{
+  color: var(--icon-badge)
+}
+
+#icon:hover{
+  background-color: #0563bb;
+}
+a #icon{
+  color: #000;
+}
+
+#icon2{
+  display: none;
 }
 
 .nav-menu a i {
@@ -217,7 +295,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu a span {
   padding: 0 5px 0 7px;
-  /* color: #45505b; */
 }
 
 @media (min-width: 992px) {
@@ -269,7 +346,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-toggle i {
-  color: #45505b;
+  color: var(--mobile-nav-bg);
 }
 
 .mobile-nav-active {
@@ -289,7 +366,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn-cv{
   padding:10px 40px;
   font-family: "Rajdhani", sans-serif;
-  background-color: #3f8bd386;
+  background-color: var(--download-bg);
   border-radius:20px;
   border: none;
   transition:.5s;
@@ -299,7 +376,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-cv:hover{
   box-shadow:1px 1px 10px rgba(0, 0, 0, 0.315);
-  background-color: rgba(255, 239, 239, 0.164);
+  background-color: var(--download-hover);
 }
 
 .btn-cv a{
@@ -407,7 +484,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #fff;
+  color: var(--header);
 }
 
 .section-title h2::before {
@@ -416,7 +493,7 @@ section {
   display: block;
   width: 120px;
   height: 1px;
-  background: #ddd;
+  background: var(--title-line);
   bottom: 1px;
   left: calc(50% - 60px);
 }
@@ -442,7 +519,8 @@ section {
 .about .content h3 {
   font-weight: 700;
   font-size: 30px;
-  color: #728394;
+  color: var(--about-title);
+  margin-bottom: 50px;
 }
 
 .about img {
@@ -484,7 +562,7 @@ section {
   width: 100%;
   position: relative;
   text-align: center;
-  background: rgba(255,255,255,0.2);
+  background: var(--skill-box);
   border-radius:20px;
 }
 
@@ -534,7 +612,7 @@ section {
   display: block;
   font-weight: 600;
   font-family: "Rajdhani", sans-serif;
-  color: #979797;
+  color: var(--skill-bar-font);
 }
 
 .skills .progress .skill .val {
@@ -543,7 +621,7 @@ section {
 }
 
 .skills .progress-bar-wrap {
-  background: #707070;
+  background: var(--skill-bar-bg);
   border-radius: 10px;
 }
 
@@ -559,7 +637,7 @@ section {
 # Resume
 --------------------------------------------------------------*/
 #resume {
-  background-color: rgba(0, 0, 0, 0.103);
+  background-color: var(--resume-bg);
   font-family: "Rajdhani", sans-serif;
 }
 .resume .resume-title {
@@ -567,7 +645,7 @@ section {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #a5a4a4;
+  color: var(--resume-sub-top);
 }
 
 .resume .resume-item {
@@ -589,7 +667,7 @@ section {
 
 .resume .resume-item h5 {
   font-size: 16px;
-  background: rgba(255, 255, 255,0.2);
+  background: var(--year-bg);
   padding: 7px 15px;
   display: inline-block;
   font-weight: 600;
@@ -654,7 +732,7 @@ section {
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: #272829;
+  color: var(--p-hover-link);
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
 }
@@ -677,7 +755,7 @@ section {
 
 .portfolio .portfolio-wrap::before {
   content: "";
-  background: rgba(0, 0, 0, 0.9);
+  background: var(--p-hover);
   position: absolute;
   left: 30px;
   right: 30px;
@@ -713,8 +791,8 @@ section {
   position: absolute;
   top: 35px;
   left: 35px;
-  border-top: 3px solid #d7dce1;
-  border-left: 3px solid #d7dce1;
+  border-top: 3px solid var(--p-hover-line);
+  border-left: 3px solid var(--p-hover-line);
   transition: all 0.5s ease 0s;
   z-index: 9994;
 }
@@ -727,15 +805,15 @@ section {
   position: absolute;
   bottom: 35px;
   right: 35px;
-  border-bottom: 3px solid #d7dce1;
-  border-right: 3px solid #d7dce1;
+  border-bottom: 3px solid var(--p-hover-line);
+  border-right: 3px solid var(--p-hover-line);
   transition: all 0.5s ease 0s;
   z-index: 9994;
 }
 
 .portfolio .portfolio-wrap .portfolio-info h4 {
   font-size: 20px;
-  color: white;
+  color: var(--p-hover-topic);
   font-weight: 600;
 }
 
@@ -791,6 +869,7 @@ section {
 --------------------------------------------------------------*/
 .portfolio-details {
   padding-top: 40px;
+  background-color: var(--p-detail-bg);
 }
 
 .portfolio-details .portfolio-details-slider img {
@@ -886,7 +965,7 @@ section {
   padding: 0 0 0 60px;
   margin-bottom: 0;
   font-size: 14px;
-  color: #9faab6;
+  color: var(--contact-font);
 }
 
 .contact .info .email, .contact .info .phone {
@@ -907,47 +986,6 @@ section {
   padding-bottom: 8px;
 }
 
-.contact .email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .email-form .error-message br + br {
-  margin-top: 25px;
-}
-
-.contact .email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-.contact .email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
-}
 
 .contact .email-form input, .contact .email-form textarea {
   border-radius: 4px;
@@ -973,7 +1011,8 @@ section {
   padding: 10px 35px;
   color: #fff;
   transition: 0.4s;
-  border-radius: 50px;
+  border-radius: 20px;
+  margin-top: 20px;
 }
 
 .contact .email-form button[type="submit"]:hover {
@@ -1002,7 +1041,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #2b2b2b;
+  background: var(--footer-bg);
   /* color: #45505b; */
   font-size: 14px;
   text-align: center;
@@ -1066,5 +1105,9 @@ section {
   }
   .about .content .row{
       text-align: center;
+  }
+  
+  #icon i{
+    margin-left: 45%;
   }
 }
