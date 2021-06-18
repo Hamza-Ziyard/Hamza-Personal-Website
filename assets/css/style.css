@@ -40,6 +40,8 @@
   --p-hover-link:#272829;
   --p-hover-topic:white;
   --form-fill:white;
+  --port-filter:rgba(0,0,0,0.5);
+  --port-filter-text:#fff
 }
 
 .light-theme{
@@ -69,6 +71,8 @@
   --p-hover-link:#000000;
   --p-hover-topic:#0563bb;
   --form-fill:black;
+  --port-filter:#fff;
+  --port-filter-text:rgba(0,0,0)
 }
 
 body {
@@ -722,7 +726,7 @@ section {
   margin: 0 auto 25px auto;
   list-style: none;
   text-align: center;
-  background: #fff;
+  background: var(--port-filter);
   border-radius: 50px;
   padding: 2px 15px;
 }
@@ -736,7 +740,7 @@ section {
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: var(--p-hover-link);
+  color: var(--port-filter-text);
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
 }
