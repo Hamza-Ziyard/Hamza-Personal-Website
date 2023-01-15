@@ -27,7 +27,7 @@
   --nav-font:white;
   --footer-bg:#2b2b2b;
   --about-title:#728394;
-  --skill-bar-font:#979797;
+  --skill-bar-font:rgb(224, 224, 224);
   --skill-bar-bg:#979797;
   --resume-sub-top:#a5a4a4;
   --download-bg:#0563bb;
@@ -601,7 +601,7 @@ section {
   padding: 0;
   margin: 0;
   font-family: "Poppins", sans-serif;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 /*--------------------------------------------------------------
@@ -611,6 +611,7 @@ section {
   height: 60px;
   display: block;
   background: none;
+  text-align: center;
 }
 
 .skills .progress .skill {
@@ -621,6 +622,7 @@ section {
   font-weight: 600;
   font-family: "Rajdhani", sans-serif;
   color: var(--skill-bar-font);
+  font-size: 20px;
 }
 
 .skills .progress .skill .val {
